@@ -1,0 +1,61 @@
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: rgb(149, 35, 35, 0.5);
+    color: rgb(255, 255, 255);
+    padding: 10px 20px;
+    position: fixed; 
+    width: 100%; 
+    top: 0px;
+  }
+  
+.logo img  {
+    max-width: 100%;
+    height: auto;
+    width: 2.5rem;
+}
+
+nav ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+ }
+  
+nav li {
+    margin-right: 40px;
+}
+  
+nav a {
+    text-decoration: none;
+    color: rgb(255, 255, 255);
+    font-size: 16px;
+     
+}
+
+@media (max-width: 300px) {
+    header {
+        display: flex;
+        justify-content: space-around;
+        padding-right: 10px;
+    }
+    nav li {
+        margin-right: 10px;
+        
+    }
+    nav a {
+        font-size: 10px;
+
+    }
+    
+}
+
+nav a:hover{
+    color: rgb(207, 83, 83);    
+     
+}
+nav a:active {
+    color: rgb(94, 128, 198);
+}
+ 
