@@ -1,11 +1,23 @@
 import { Component } from '@angular/core';
 import { RouterOutlet } from '@angular/router';
 import { HeaderComponent } from './shared/components/header/header.component';
+
 import { FooterComponent } from './shared/footer/footer.component';
+
+
+import { LandingComponent } from './landing/landing.component';
+
+import { ProductosComponent } from './productos/productos.component';
+
+import { DashboardComponent } from './dashboard/dashboard.component';
+
+
 @Component({
   selector: 'app-root',
   standalone: true,
-  imports: [RouterOutlet,HeaderComponent,FooterComponent],
+  imports: [RouterOutlet,HeaderComponent, DashboardComponent, LandingComponent, ProductosComponent,FooterComponent],
+
+
   templateUrl: './app.component.html',
   styleUrl: './app.component.css'
 })
