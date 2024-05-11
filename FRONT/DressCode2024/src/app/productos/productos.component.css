@@ -1,0 +1,14 @@
+H1 {
+    text-align: center;
+    margin-top: 100px;
+    font-family: Arial, sans-serif;
+    font-size: 48px;
+    font-weight: 500;
+    color: #fff;
+}
+
+.imagen-producto {
+    width: 100%;
+    max-height: 200px; /* Establece la altura máxima deseada */
+    object-fit: contain; /* Mantiene la relación de aspecto y recorta la imagen si es necesario */
+}
