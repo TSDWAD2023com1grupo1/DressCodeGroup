@@ -10,6 +10,7 @@ export
         //{path: "contact", component: ContactComponent},
         //{path: "**", redirectTo: "", pathMatch: "full"}
       
-      
+        //HOLA HOLA
+        
       
 ];
