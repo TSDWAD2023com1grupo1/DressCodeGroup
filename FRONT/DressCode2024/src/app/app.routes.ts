@@ -7,6 +7,7 @@ import { DashboardComponent } from './dashboard/dashboard.component';
 
 import { ProductosComponent } from './productos/productos.component';
 import { LandingComponent } from './landing/landing.component';
+import { Pagina404Component } from './pagina404/pagina404.component';
 export 
 
     const routes: Routes = [
@@ -16,9 +17,17 @@ export
         //{path: "products/:category/:productId", component: ProductDetailComponent},
         { path: 'Contacto', component: ContactoComponent },
         //{path: "**", redirectTo: "", pathMatch: "full"}
-          {path: "index", component: LandingComponent},
+        {path: "index", component: LandingComponent},
+        {path:"", redirectTo:"/index", pathMatch:"full"},
+
+
+
+
+
+        //este ruteo a esta pagina404 va a al ultimo
+        {path: "**", component: Pagina404Component},
       
-        //HOLA HOLA
+        //este ruteo a esta pagina404 va a al ultimo
         
       
 
