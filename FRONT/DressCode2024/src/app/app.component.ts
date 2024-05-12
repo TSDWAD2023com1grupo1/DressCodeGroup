@@ -13,12 +13,13 @@ import { ProductosComponent } from './productos/productos.component';
 import { DashboardComponent } from './dashboard/dashboard.component';
 
 import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
+import { SobreNosotrosComponent } from './sobre-nosotros/sobre-nosotros.component';
 
 @Component({
   selector: 'app-root',
   standalone: true,
 
-  imports: [RouterOutlet,HeaderComponent, DashboardComponent, LandingComponent, ProductosComponent,FooterComponent, ContactoComponent, FontAwesomeModule],
+  imports: [RouterOutlet,HeaderComponent, DashboardComponent, LandingComponent, ProductosComponent,FooterComponent, ContactoComponent, FontAwesomeModule, SobreNosotrosComponent],
 
 
   templateUrl: './app.component.html',

@@ -8,6 +8,7 @@ import { DashboardComponent } from './dashboard/dashboard.component';
 import { ProductosComponent } from './productos/productos.component';
 import { LandingComponent } from './landing/landing.component';
 import { Pagina404Component } from './pagina404/pagina404.component';
+import { SobreNosotrosComponent } from './sobre-nosotros/sobre-nosotros.component';
 export 
 
     const routes: Routes = [
@@ -19,6 +20,7 @@ export
         //{path: "**", redirectTo: "", pathMatch: "full"}
         {path: "index", component: LandingComponent},
         {path:"", redirectTo:"/index", pathMatch:"full"},
+        {path: "sobre-nosotros", component: SobreNosotrosComponent},
 
 
 
