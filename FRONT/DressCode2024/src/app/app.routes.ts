@@ -2,7 +2,7 @@ import { Routes } from '@angular/router';
 import { DashboardComponent } from './dashboard/dashboard.component';
 
 import { ProductosComponent } from './productos/productos.component';
-
+import { LandingComponent } from './landing/landing.component';
 export 
 
     const routes: Routes = [
@@ -12,7 +12,7 @@ export
         //{path: "products/:category/:productId", component: ProductDetailComponent},
         //{path: "contact", component: ContactComponent},
         //{path: "**", redirectTo: "", pathMatch: "full"}
-          
+          {path: "index", component: LandingComponent},
       
         //HOLA HOLA
         
