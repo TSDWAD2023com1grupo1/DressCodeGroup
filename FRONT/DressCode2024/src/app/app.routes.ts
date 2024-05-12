@@ -6,7 +6,7 @@ import { ContactoComponent } from './pages/contacto/contacto.component';
 import { DashboardComponent } from './dashboard/dashboard.component';
 
 import { ProductosComponent } from './productos/productos.component';
-
+import { LandingComponent } from './landing/landing.component';
 export 
 
     const routes: Routes = [
@@ -16,7 +16,7 @@ export
         //{path: "products/:category/:productId", component: ProductDetailComponent},
         { path: 'Contacto', component: ContactoComponent },
         //{path: "**", redirectTo: "", pathMatch: "full"}
-          
+          {path: "index", component: LandingComponent},
       
         //HOLA HOLA
         
