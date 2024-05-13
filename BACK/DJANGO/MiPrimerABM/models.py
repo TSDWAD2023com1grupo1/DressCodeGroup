@@ -22,7 +22,17 @@ class Categoria(models.Model):
     class Meta:
         managed = False
         db_table = 'categoria'
+        
+
+class DetalleTransaccion(models.Model):
+    iddetalle_transaccion = models.AutoField(primary_key=True)
+    idtransaccion = models.ForeignKey('Transacciones', models.DO_NOTHING, db_column='idtransaccion')
+    idproducto = models.ForeignKey('Productos', models.DO_NOTHING, db_column='idproducto')
+    cantidad = models.IntegerField()
 
 
+    class Meta:
+        managed = False
+        db_table = 'detalle_transaccion'
 
 
