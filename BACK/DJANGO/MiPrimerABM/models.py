@@ -36,3 +36,17 @@ class DetalleTransaccion(models.Model):
         db_table = 'detalle_transaccion'
 
 
+class Productos(models.Model):
+    idproducto = models.AutoField(primary_key=True)
+    nombre = models.CharField(max_length=100)
+    descripcion = models.TextField(blank=True, null=True)
+    precio = models.DecimalField(max_digits=10, decimal_places=2)
+    stock = models.IntegerField()
+    idproveedor = models.ForeignKey('Proveedores', models.DO_NOTHING, db_column='idproveedor', blank=True, null=True)
+    idcategoria = models.ForeignKey(Categoria, models.DO_NOTHING, db_column='idCategoria', blank=True, null=True)  # Field name made lowercase.
+
+
+    class Meta:
+        managed = False
+        db_table = 'productos'
+
