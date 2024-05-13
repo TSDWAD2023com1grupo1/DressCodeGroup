@@ -12,5 +12,17 @@ class Administrador(models.Model):
     class Meta:
         managed = False
         db_table = 'administrador'
+        
+    
+class Categoria(models.Model):
+    idcategoria = models.IntegerField(db_column='idCategoria', primary_key=True)  # Field name made lowercase.
+    categoria = models.CharField(db_column='Categoria', max_length=45, blank=True, null=True)  # Field name made lowercase.
+
+
+    class Meta:
+        managed = False
+        db_table = 'categoria'
+
+
 
 
