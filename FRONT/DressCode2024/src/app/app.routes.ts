@@ -1,11 +1,13 @@
 import { Routes } from '@angular/router';
 
 import { ContactoComponent } from './pages/contacto/contacto.component';
-
+import { RegistroComponent } from './registro/registro.component';
 
 import { DashboardComponent } from './dashboard/dashboard.component';
 
 import { ProductosComponent } from './productos/productos.component';
+
+import { LoginComponent } from './login/login.component';
 import { LandingComponent } from './landing/landing.component';
 import { Pagina404Component } from './pagina404/pagina404.component';
 import { SobreNosotrosComponent } from './sobre-nosotros/sobre-nosotros.component';
@@ -18,6 +20,8 @@ export
         //{path: "products/:category/:productId", component: ProductDetailComponent},
         { path: 'Contacto', component: ContactoComponent },
         //{path: "**", redirectTo: "", pathMatch: "full"}
+        {path: "login", component: LoginComponent},
+        {path: "registro", component: RegistroComponent},
         {path: "index", component: LandingComponent},
         {path:"", redirectTo:"/index", pathMatch:"full"},
         {path: "sobre-nosotros", component: SobreNosotrosComponent},
@@ -30,6 +34,7 @@ export
         {path: "**", component: Pagina404Component},
       
         //este ruteo a esta pagina404 va a al ultimo
+
         
       
 
