@@ -14,12 +14,16 @@ import { DashboardComponent } from './dashboard/dashboard.component';
 import { LoginComponent } from './login/login.component';
 import { RegistroComponent } from './registro/registro.component';
 
+import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
+import { SobreNosotrosComponent } from './sobre-nosotros/sobre-nosotros.component';
 
 @Component({
   selector: 'app-root',
   standalone: true,
+  
 
-  imports: [ RouterOutlet, HeaderComponent, DashboardComponent, LandingComponent, ProductosComponent,FooterComponent, ContactoComponent, LoginComponent, RegistroComponent],
+imports: [RouterOutlet,HeaderComponent, DashboardComponent, LandingComponent, ProductosComponent,FooterComponent, ContactoComponent, FontAwesomeModule, SobreNosotrosComponent, LoginComponent, RegistroComponent],
+
 
 
   templateUrl: './app.component.html',
