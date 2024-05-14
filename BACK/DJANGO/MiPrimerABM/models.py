@@ -50,3 +50,14 @@ class Productos(models.Model):
         managed = False
         db_table = 'productos'
 
+
+class Proveedores(models.Model):
+    idproveedor = models.AutoField(primary_key=True)
+    nombre = models.CharField(max_length=100)
+    contacto = models.CharField(max_length=100, blank=True, null=True)
+    direccion = models.CharField(max_length=200, blank=True, null=True)
+
+
+    class Meta:
+        managed = False
+        db_table = 'proveedores'
