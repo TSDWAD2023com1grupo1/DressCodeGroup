@@ -1,27 +1,24 @@
-const btnSignIn = document.getElementById("sign-in"),
-      btnSignUp = document.getElementById("sign-up"),
-      formRegister = document.querySelector(".register"),
-      formLogin = document.querySelector(".login");
-     
-if (window.location.href.includes("login.html")){
-    btnSignIn.addEventListener("click", () =>{
-    
-        formRegister.classList.add("hide"),
-        formLogin.classList.remove("hide");
-        }
-    );
-    btnSignUp.addEventListener("click", e =>{
-        formLogin.classList.add("hide"),
-        formRegister.classList.remove("hide");     
-        }
-    );
-    document.getElementById("user-registrar").addEventListener("click", function(e) {
-    e.preventDefault(); 
-    
-    registrar(); 
+@ViewChild('signInBtn') signInBtn!: ElementRef;
+  @ViewChild('signUpBtn') signUpBtn!: ElementRef;
+  @ViewChild('registerForm') registerForm!: ElementRef;
+  @ViewChild('loginForm') loginForm!: ElementRef;
+
+  constructor(private renderer: Renderer2) {}
+
+  ngAfterViewInit() {
+    const url = window.location.href;
+    if (url.includes("login.html")) {
+      this.renderer.listen(this.signInBtn.nativeElement, 'click', () => {
+        this.renderer.addClass(this.registerForm.nativeElement, 'hide');
+        this.renderer.removeClass(this.loginForm.nativeElement, 'hide');
+      });
+
+      this.renderer.listen(this.signUpBtn.nativeElement, 'click', () => {
+        this.renderer.addClass(this.loginForm.nativeElement, 'hide');
+        this.renderer.removeClass(this.registerForm.nativeElement, 'hide');
+      });
     }
-    )
-};
+  }
 
 if(window.location.href.includes("login.html")){
 
