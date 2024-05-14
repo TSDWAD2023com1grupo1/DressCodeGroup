@@ -61,3 +61,28 @@ class Proveedores(models.Model):
     class Meta:
         managed = False
         db_table = 'proveedores'
+
+
+class Transacciones(models.Model):
+    idtransaccion = models.AutoField(primary_key=True)
+    fecha = models.DateField()
+    idcliente = models.IntegerField()
+    total = models.DecimalField(max_digits=10, decimal_places=2)
+    usuario_idusuario = models.ForeignKey('Usuario', models.DO_NOTHING, db_column='usuario_idUsuario')  # Field name made lowercase.
+
+    class Meta:
+        managed = False
+        db_table = 'transacciones'
+
+
+class Usuario(models.Model):
+    idusuario = models.AutoField(db_column='idUsuario', primary_key=True)  # Field name made lowercase.
+    password = models.CharField(db_column='Password', max_length=45, blank=True, null=True)  # Field name made lowercase.
+    fecha_registro = models.DateField(blank=True, null=True)
+    nombre = models.CharField(max_length=45, blank=True, null=True)
+    email = models.CharField(max_length=45, blank=True, null=True)
+    direccion = models.CharField(max_length=45, blank=True, null=True)
+
+    class Meta:
+        managed = False
+        db_table = 'usuario'
