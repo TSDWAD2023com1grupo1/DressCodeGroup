@@ -1,9 +1,14 @@
-<div class="container">
+<div  class="bg-image"
+style="
+  background-image: url('../../../assets/img/img_login/ropa-fondo-2.jpg');
+  
+">
+<div class="container p-5 " >
     <div class="row justify-content-center">
       <div class="col-md-6">
         <main class="form-signin">
           <form [formGroup]="form" (ngSubmit)="onEnviar($event)">
-            <h1 class="h3 mb-3 fw-normal text-center">Please sign in</h1>
+            <h1 class="h3 mb-3 fw-normal text-center">Iniciar Sesion</h1>
             <div class="form-floating mb-5">
               <input type="email" formControlName="email" class="form-control">
               <label for="floatingInput">Email</label>
@@ -38,12 +43,11 @@
             </div>
             <div class="checkbox mb-3">
               <label>
-                <input type="checkbox" value="remember-me"> Remember me
+                <input type="checkbox" value="remember-me"> Recordarme
               </label>
               
             </div>
-            <button class="w-100 btn btn-lg btn-primary" type="submit">Sign in</button>
-            <p class="mt-5 mb-3 text-muted text-center">&copy; 2024</p>
+            <button class="w-100 btn btn-lg btn-primary" type="submit">Iniciar Sesion</button>
           </form>
         </main>
       </div>
@@ -51,7 +55,7 @@
   </div>
 
 
-
+</div>
 
 
 

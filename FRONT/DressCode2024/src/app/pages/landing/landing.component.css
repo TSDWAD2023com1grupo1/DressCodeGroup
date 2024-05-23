@@ -121,7 +121,7 @@ nav a:active {
 
 
 .taza1 {
-    background-image: url("../../assets/img/img_landing/taza\ 2.jpg");
+    background-image: url("../../../../src/assets/img/img_landing/taza\ 2.jpg");
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;
@@ -132,7 +132,7 @@ nav a:active {
 }
 
 .remera1 {
-    background-image: url("../../assets/img/img_landing/remera\ 2.jpg");
+    background-image: url("../../../../src/assets/img/img_landing/remera\ 2.jpg");
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;
@@ -143,7 +143,7 @@ nav a:active {
 }
 
 .libreta {
-    background-image: url("../../assets/img/img_landing/reloj.jpg");
+    background-image: url("../../../../src/assets/img/img_landing/reloj.jpg");
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;
@@ -154,7 +154,7 @@ nav a:active {
 }
 
 .bolso1 {
-    background-image: url("../../assets/img/img_landing/bolso\ 1.jpg");
+    background-image: url("../../../../src/assets/img/img_landing/bolso\ 1.jpg");
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;
