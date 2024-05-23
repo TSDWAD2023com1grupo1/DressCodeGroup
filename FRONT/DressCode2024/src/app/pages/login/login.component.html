@@ -1,0 +1,128 @@
+<div  class="bg-image"
+style="
+  background-image: url('../../../assets/img/img_login/ropa-fondo-2.jpg');
+  
+">
+<div class="container p-5 " >
+    <div class="row justify-content-center">
+      <div class="col-md-6">
+        <main class="form-signin">
+          <form [formGroup]="form" (ngSubmit)="onEnviar($event)">
+            <h1 class="h3 mb-3 fw-normal text-center">Iniciar Sesion</h1>
+            <div class="form-floating mb-5">
+              <input type="email" formControlName="email" class="form-control">
+              <label for="floatingInput">Email</label>
+              @if (Email?.errors && Email?.touched)
+              {
+                @if (Email?.hasError('required'))
+                {
+                  <p class="text-danger">el mail es requerido.</p>
+                }
+                @else if (Email?.hasError('email'))
+                {
+                  <p class="text-danger">El formato del email debe ser valido.</p>
+                }
+              }
+            </div>
+            <div class="form-floating">
+              <input type="password" formControlName="password" class="form-control">
+              <label for="floatingPassword">Password</label>
+              @if(Password?.errors && Password?.touched)
+              {
+                @if(Password?.hasError('required'))
+                {
+                  <p class="text-danger">El password es requerido.</p>
+                }
+                @else if (Password?.hasError('minlength'))
+                {
+                  <p class="text-danger">El password requiere como mínimo 8 caracteres.</p>
+                }
+              }
+        
+              
+            </div>
+            <div class="checkbox mb-3">
+              <label>
+                <input type="checkbox" value="remember-me"> Recordarme
+              </label>
+              
+            </div>
+            <button class="w-100 btn btn-lg btn-primary" type="submit">Iniciar Sesion</button>
+          </form>
+        </main>
+      </div>
+    </div>
+  </div>
+
+
+</div>
+
+
+
+
+<!-- <div class="text-center col-6">
+    <main class="form-signin" >
+      <form [formGroup]="form" (ngSubmit)="onEnviar($event)">
+        <h1 class="h3 mb-3 fw-normal">Please sign in</h1>
+        <div class="form-floating mb-5">
+          <input type="email" formControlName="email" class="form-control" >           
+          <label for="floatingInput">Email</label>
+
+            @if (Email?.errors && Email?.touched){
+
+                @if (Email?.hasError('required')){
+
+                    <p class="text-danger">
+                        el mail es requerido.
+                    </p>
+                }
+                @else if (Email?.hasError('email')){
+                    <p class="text-danger">
+                        El formato del email debe ser valido.
+                    </p>
+
+
+                }
+            }
+
+
+
+
+        </div>
+        <div class="form-floating">
+          <input type="password" formControlName="password" class="form-control" >
+          <label for="floatingPassword">Password</label>
+
+            @if(Password?.errors && Password?.touched){
+                @if(Password?.hasError('required')){
+                    <p class="text-danger">
+                        El password es requerido.
+                    </p>
+
+                }
+                @else if (Password?.hasError('minlength')) {
+                    <p class="text-danger">
+                        El password requiere como minimo 8 caracteres.
+                    </p>
+                }
+
+
+            }
+
+
+
+
+
+        </div>
+    
+        <div class="checkbox mb-3">
+          <label>
+            <input type="checkbox" value="remember-me"> Remember me
+          </label>
+        </div>
+        <button class="w-100 btn btn-lg btn-primary" type="submit">Sign in</button>
+        <p class="mt-5 mb-3 text-muted">&copy; 2024</p>
+      </form>
+    </main>
+</div>
+ -->
