@@ -15,14 +15,14 @@ style="
                 <label for="floatingInput">Nombre</label>
                 @if (Nombre?.errors && Nombre?.touched)
               {
-                @if (Nombre?.hasError('required'))
-                {
-                  <p class="text-danger">el Nombre completo es requerido.</p>
-                }
-                @else if (Nombre?.hasError('pattern'))
-                {
-                  <p class="text-danger">El formato  debe ser valido.</p>
-                }
+                  @if (Nombre?.hasError('required'))
+                  {
+                    <p class="text-danger">el Nombre completo es requerido.</p>
+                  }
+                  @else if (Nombre?.hasError('pattern'))
+                  {
+                    <p class="text-danger">El formato  debe ser valido.</p>
+                  }
               }
             </div>
               <div class="form-floating mb-5">
@@ -59,17 +59,20 @@ style="
                   {
                     <p class="text-danger">El password no debe exeder los 16 carácteres.</p>
                   }
-                  @else if (Nombre?.hasError('pattern'))
+                @else if (Nombre?.hasError('pattern'))
                   {
                     <p class="text-danger">'La contraseña debe contener al menos un número, una letra mayúscula, una letra minúscula y un caracter no alfanumérico.</p>
                   }  
-                }
+              }
             </div>    
             <div class="form-floating mb-5">
             
                 
             <input type="password" formControlName="repitePassword" class="form-control">
             <label for="floatingInput">Repite Contraseña</label>
+            @if (formRegister.errors && RepitePassword?.touched) {
+              <p class="text-danger">Las contraseñas no coinciden.</p>
+            }
             
             </div>    
               

@@ -1,6 +1,6 @@
 import { Component } from '@angular/core';
 
-import { ReactiveFormsModule, FormBuilder, Validators, FormGroup } from '@angular/forms';
+import { ReactiveFormsModule, FormBuilder, Validators, FormGroup, AbstractControl } from '@angular/forms';
 
 @Component({
   selector: 'app-registro',
@@ -21,21 +21,50 @@ export class RegistroComponent {
     
         this.formRegister=this.formBuilder.group(
               {
-                nombre:["",[Validators.required,Validators.minLength(3),Validators.pattern(/^[a-zA-ZñÑáéíóúÁÉÍÓÚ\s]+$/)]],
-                email:["",[Validators.required, Validators.email]],
-                password:["",[Validators.required,Validators.minLength(8), Validators.maxLength(16), Validators.pattern(/^(?=.*\d)(?=.*[a-z])(?=.*[A-Z])(?=.*\W).{8,16}$/)]],
-                repitePassword:["",[Validators.required, Validators.minLength(8)]]
+                nombre:["",[
+                  Validators.required,
+                  Validators.minLength(3),
+                  Validators.pattern(/^[a-zA-ZñÑáéíóúÁÉÍÓÚ\s]+$/)]],
+
+                email:["",[
+                  Validators.required, 
+                  Validators.email]],
+
+                password:["",[
+                  Validators.required,
+                  Validators.minLength(8), 
+                  Validators.maxLength(16), 
+                  Validators.pattern(/^(?=.*\d)(?=.*[a-z])(?=.*[A-Z])(?=.*\W)/)]],
+                repitePassword: [
+                  "", 
+                  Validators.required
+                ]
+              },
+              {
+                validator: this.passwordMatchValidator
               }
-        )
+        );
        
         
       
       }
-      
-      onEnviar(event:Event)
-      {
-        console.log(this.formRegister.value)
+
+      passwordMatchValidator(control: AbstractControl) {
+
+        const password = control.get('password')?.value;
+        const repitePassword = control.get('repitePassword')?.value;
+        return password === repitePassword ? null : { mismatch: true };
       }
+      
+      onEnviar(event:Event) {
+        event.preventDefault();
+        if (this.formRegister.valid) {
+          console.log(this.formRegister.value);
+       } 
+        else {
+          this.formRegister.markAllAsTouched(); 
+      }
+    }
     
     
     
