@@ -1,6 +1,9 @@
 import { Component } from '@angular/core';
 
 import { ReactiveFormsModule, FormBuilder, Validators, FormGroup, AbstractControl } from '@angular/forms';
+import { AuthService } from '../../services/auth.service';
+
+// import { User } from '../../../models/user';
 
 @Component({
   selector: 'app-registro',
@@ -16,7 +19,8 @@ export class RegistroComponent {
   
    
       formRegister!:FormGroup;
-      constructor(private formBuilder: FormBuilder){
+      constructor(private formBuilder: FormBuilder ) //private authService:AuthServicevice, private router: Router
+      {
     
     
         this.formRegister=this.formBuilder.group(
@@ -65,6 +69,8 @@ export class RegistroComponent {
           this.formRegister.markAllAsTouched(); 
       }
     }
+
+    //this.authService.createUser(this.form.value)
     
     
     

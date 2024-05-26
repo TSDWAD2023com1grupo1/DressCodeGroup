@@ -22,7 +22,7 @@ import { SobreNosotrosComponent } from './pages/sobre-nosotros/sobre-nosotros.co
   standalone: true,
   
 
-imports: [RouterOutlet,HeaderComponent, DashboardComponent, LandingComponent, ProductosComponent,FooterComponent, ContactoComponent, FontAwesomeModule, SobreNosotrosComponent, LoginComponent, RegistroComponent],
+imports: [RouterOutlet,HeaderComponent, DashboardComponent, LandingComponent, ProductosComponent,FooterComponent, ContactoComponent,FontAwesomeModule, SobreNosotrosComponent, LoginComponent, RegistroComponent],
 
 
 
