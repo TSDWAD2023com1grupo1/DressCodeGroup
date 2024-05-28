@@ -11,6 +11,7 @@
                     <div class="card-body" >
                     <h5 class="card-title">Remera Code {{ producto.nombre }}</h5>
                     <div class="accordion" id="accordion1" > {{producto.id}}
+
                         <div class="accordion-item">
                         <h2 class="accordion-header">
                             <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapse1" aria-expanded="false" aria-controls="collapse1">
@@ -262,6 +263,7 @@
                     <div class="card-body">
                     <h5 class="card-title">Remera Code</h5>
                     <div class="accordion" id="accordion1">
+
                         <div class="accordion-item">
                         <h2 class="accordion-header">
                             <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapse1" aria-expanded="false" aria-controls="collapse1">
@@ -269,7 +271,7 @@
                             </button>
                         </h2>
                         <div id="collapse1" class="accordion-collapse collapse" data-bs-parent="#accordion1">
-                            <div class="accordion-body">
+                            <div class="accordion-body"> {{producto.descripcion}}
                                 Expresa tu amor por la programación con nuestra Camiseta "code" en letras verdes sobre negro!
 
                                     Esta camiseta es un homenaje a los apasionados de la codificación y la tecnología. Con un diseño sencillo pero poderoso, esta prenda te permite llevar tu pasión por el código a donde quiera que vayas.
@@ -281,9 +283,10 @@
                     </div>
                     <a href="#" class="btn btn-primary">Comprar</a>
                     </div>
+                }
             </div>
 
-            <div class="card m-5 p-2" style="width: 18rem;">
+            <!-- <div class="card m-5 p-2" style="width: 18rem;">
                 <img src="../../assets/img/img_productos/pantalon_binario.jpeg" class="card-img-top align-self-center imagen-producto" alt="pantalon binario"/>
                     <div class="card-body">
                     <h5 class="card-title">Pantalon Binario</h5>

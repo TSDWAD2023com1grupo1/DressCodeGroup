@@ -1,26 +1,36 @@
 import { Component } from '@angular/core';
-
 import { ReactiveFormsModule, FormBuilder, Validators, FormGroup, AbstractControl } from '@angular/forms';
+
 import { AuthService } from '../../services/auth.service';
 
 // import { User } from '../../../models/user';
 
+
+import { RegistroService } from '../../service/auth/registro.service';
+import { AuthService } from '../../service/auth.service';
+import { LoginService } from '../../service/auth/login.service';
+import { Usuario } from '../../models/Usuarios';
 @Component({
   selector: 'app-registro',
   standalone: true,
   imports: [ReactiveFormsModule],
   templateUrl: './registro.component.html',
-  styleUrl: './registro.component.css'
+  styleUrl: './registro.component.css',
+  providers:[RegistroService],
 })
 export class RegistroComponent {
   
 
+      
   
-  
-   
+
       formRegister!:FormGroup;
-      constructor(private formBuilder: FormBuilder ) //private authService:AuthServicevice, private router: Router
-      {
+
+      constructor(private formBuilder: FormBuilder,
+                  private registroService: RegistroService
+        
+      ){
+
     
     
         this.formRegister=this.formBuilder.group(

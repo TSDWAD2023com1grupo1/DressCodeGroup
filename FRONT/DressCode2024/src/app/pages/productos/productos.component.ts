@@ -1,3 +1,4 @@
+
 import { Component, OnInit } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { Producto, productoService } from '../../service/producto.service'; // Importa correctamente
@@ -23,3 +24,4 @@ export class ProductosComponent implements OnInit {
       .subscribe(productos => this.productos = productos);
   }
 }
+
