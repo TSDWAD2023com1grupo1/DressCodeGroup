@@ -7,14 +7,16 @@ import { Usuario } from '../../models/Usuarios';
   providedIn: 'root'
 })
 export class RegistroService {
-  url="https://reqres.in/api/users/1";
+  url="http://localhost:3000/usuario";
   constructor(private http:HttpClient,) { 
-  
-
-  }
-  registro(){
     
-
-
+    this.http.post<Usuario>(this.url, Usuario);
+    this.http.get(this.url)
   }
+  crearUsuario(usuario:Usuario):Observable<any>{
+    return this.http.post(this.url, usuario);
+    return this.http.get(this.url)
+  }
+
 }
+

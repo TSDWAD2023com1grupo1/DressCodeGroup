@@ -1,26 +1,24 @@
 import { Component } from '@angular/core';
 import { ReactiveFormsModule, FormBuilder, Validators, FormGroup, AbstractControl } from '@angular/forms';
 import { RegistroService } from '../../service/auth/registro.service';
-import { AuthService } from '../../service/auth.service';
-import { LoginService } from '../../service/auth/login.service';
 import { Usuario } from '../../models/Usuarios';
+import { Router } from '@angular/router';
 @Component({
   selector: 'app-registro',
   standalone: true,
   imports: [ReactiveFormsModule],
   templateUrl: './registro.component.html',
   styleUrl: './registro.component.css',
-  providers:[RegistroService],
 })
 export class RegistroComponent {
-  
 
-      
   
 
       formRegister!:FormGroup;
       constructor(private formBuilder: FormBuilder,
-                  private registroService: RegistroService
+                  private registroService: RegistroService,
+                  private router: Router,
+                
         
       ){
     
@@ -43,7 +41,7 @@ export class RegistroComponent {
                   Validators.pattern(/^(?=.*\d)(?=.*[a-z])(?=.*[A-Z])(?=.*\W)/)]],
                 repitePassword: [
                   "", 
-                  Validators.required
+                  [Validators.required]
                 ]
               },
               {
@@ -65,14 +63,25 @@ export class RegistroComponent {
       onEnviar(event:Event) {
         event.preventDefault();
         if (this.formRegister.valid) {
-          console.log(this.formRegister.value);
-       } 
-        else {
-          this.formRegister.markAllAsTouched(); 
+          console.log("Enviando Al servidor...");
+                        
+          this.registroService.crearUsuario(this.formRegister.value as Usuario).subscribe(data => {
+            console.log(data.id);
+            console.log( this.formRegister.value as Usuario)
+          if (data.id>0)
+          {
+           alert("El registro ha sido creado satisfactoriamente. A continuación, por favor Inicie Sesión.");
+           this.router.navigate(['/login'])
+          }
+          }
+        )
+        }
+        else{
+                this.formRegister.markAllAsTouched();
+        }
+     
       }
-    }
-    
-    
+      
     
       get Password(){
         return this.formRegister.get("password");}
