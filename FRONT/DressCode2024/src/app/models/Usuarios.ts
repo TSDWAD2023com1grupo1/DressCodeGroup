@@ -1,8 +1,8 @@
-export class Usuario{
-    nombre:string="";
-    apellido:string="";
-    password:string="";
-    email:string="";
-    id:number=0;
+// export class Usuario{
+//     nombre:string="";
+//     apellido:string="";
+//     password:string="";
+//     email:string="";
+//     id:number=0;
     
-}
+// }

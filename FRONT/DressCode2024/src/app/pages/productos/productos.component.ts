@@ -14,12 +14,24 @@ import { HttpClientModule } from '@angular/common/http';
   styleUrls: ['./productos.component.css'], // styleUrl -> styleUrls
 })
 export class ProductosComponent implements OnInit {
-  productos: Producto[] = [];
-  @Injectable(productoService : ProductoService)
-    constructor() { }
+  productos: any;
+    constructor(productoService:ProductoService) { 
+      
+      this.productos = productoService.obtenerProductos().subscribe({next: (productos) => {
+        this.productos=productos;
+      },
+        error: (error) => {
+        console.error(error)
+      }
+    
+
+      });
+      
+      
+    }
 
 
   ngOnInit(): void {
-    this.productoService.obtenerProductos().subscribe(productos => this.productos = productos);
+   
   }
 }
