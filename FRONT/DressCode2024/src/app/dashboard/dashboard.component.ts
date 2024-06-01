@@ -1,6 +1,6 @@
 import { Component } from '@angular/core';
 import { RouterLink}  from '@angular/router';
-import { DashboardService } from '../services/dashboard.service';
+import { DashboardService } from '../service/dashboard.service';
 
 @Component({
   selector: 'app-dashboard',
