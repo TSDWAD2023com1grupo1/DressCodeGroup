@@ -1,8 +1,9 @@
 
 import { Component, OnInit } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import { Producto, ProductoService } from '../../service/producto.service'; // Importa correctamente
+import {  ProductoService } from '../../service/producto.service'; // Importa correctamente
 import { HttpClientModule } from '@angular/common/http';
+import { Producto } from '../../models/Producto'
 
 
 @Component({
