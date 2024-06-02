@@ -8,7 +8,9 @@ import { Producto } from '../models/Producto'
   providedIn: 'root'
 })
 export class ProductoService {
-  private apiUrl = 'https://localhost:8040/productos/';
+  private apiUrl = 'https://localhost:3000/'
+  
+  // 'https://localhost:8040/productos/';
 
   constructor(private http: HttpClient) { }
 
