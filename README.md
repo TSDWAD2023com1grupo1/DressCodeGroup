@@ -1,9 +1,10 @@
+
 ![Angular](https://img.shields.io/badge/Angular-17.x-red)
 ![JSON](https://img.shields.io/badge/JSON-Any-brightgreen)
 ![JSON Server](https://img.shields.io/badge/JSON%20Server-0.x-yellow)
 ![Django](https://img.shields.io/badge/Django-4.x-blue)
 
-![ISPC_frontend_Angular17](https://github.com/TravelDreams2024/ISPC2024/assets/45200064/495a9b5e-54c2-4b95-8310-c5c6aac4d503)
+![ISPC_frontend_Angular17](https://raw.githubusercontent.com/JavierCarranza0101/imagenes-dresscodehost/main/capturas/Untitled.png)
 
 
 # PROYECTO DREES CODE GROUP
