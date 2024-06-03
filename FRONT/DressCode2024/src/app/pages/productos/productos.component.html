@@ -3,14 +3,18 @@
 <div class="container-xxl">
     <div class="productos">
         <div class="d-flex justify-content-center flex-wrap">
-
+        @for (producto of productos; track $index) {
             <div class="card m-5 p-2" style="width: 18rem;">
-                <img src="../../assets/img/img_productos/remera_code.jpeg" class="card-img-top align-self-center imagen-producto" alt="remera code"  /> 
+                <img [src]="producto.imagen" class="card-img-top align-self-center imagen-producto" alt="remera code"  /> 
+                <!-- <img src="../../assets/img/img_productos/remera_code.jpeg" class="card-img-top align-self-center imagen-producto" alt="remera code"  />  -->
 
-                @for (producto of productos; track $index) {
+
+                
                     <div class="card-body" >
-                    <h5 class="card-title">Remera Code {{ producto.nombre }}</h5>
-                    <div class="accordion" id="accordion1" > {{producto.id}}
+                    <h5 class="card-title"> {{ producto.nombre }}</h5> 
+
+                    <!-- card Remera Code -->
+                    <div class="accordion" id="accordion1" > {{producto.idproducto}}
 
                         <div class="accordion-item">
                         <h2 class="accordion-header">
@@ -20,19 +24,22 @@
                         </h2>
                         <div id="collapse1" class="accordion-collapse collapse" data-bs-parent="#accordion1">
                             <div class="accordion-body"> {{producto.descripcion}}
-                                Expresa tu amor por la programación con nuestra Camiseta "code" en letras verdes sobre negro!
-
-                                    Esta camiseta es un homenaje a los apasionados de la codificación y la tecnología. Con un diseño sencillo pero poderoso, esta prenda te permite llevar tu pasión por el código a donde quiera que vayas.
-                                    Cuenta con un diseño minimalista que presenta la palabra "code" en letras verdes en la parte delantera, destacando tu conexión con el mundo de la programación de una manera elegante y sutil. Fabricada con algodón suave y de alta calidad, esta camiseta es cómoda de llevar durante todo el día. El ajuste clásico asegura comodidad y estilo.
-                                    Agrega un toque de programación a tu estilo diario. Es perfecta para eventos informales, conferencias tecnológicas. ¡Haz tu pedido hoy mismo y lleva el código contigo!
+                               
                             </div>
+                            <!-- en descripcion: Expresa tu amor por la programación con nuestra Camiseta "code" en letras verdes sobre negro!
+
+                            Esta camiseta es un homenaje a los apasionados de la codificación y la tecnología. Con un diseño sencillo pero poderoso, esta prenda te permite llevar tu pasión por el código a donde quiera que vayas.
+                            Cuenta con un diseño minimalista que presenta la palabra "code" en letras verdes en la parte delantera, destacando tu conexión con el mundo de la programación de una manera elegante y sutil. Fabricada con algodón suave y de alta calidad, esta camiseta es cómoda de llevar durante todo el día. El ajuste clásico asegura comodidad y estilo.
+                            Agrega un toque de programación a tu estilo diario. Es perfecta para eventos informales, conferencias tecnológicas. ¡Haz tu pedido hoy mismo y lleva el código contigo! -->
                         </div>
                         </div>
                     </div>
                     <a href="#" class="btn btn-primary">Comprar</a>
                     </div>
-                }
+            
             </div>
+
+        }
 
             <!-- <div class="card m-5 p-2" style="width: 18rem;">
                 <img src="../../assets/img/img_productos/pantalon_binario.jpeg" class="card-img-top align-self-center imagen-producto" alt="pantalon binario"/>

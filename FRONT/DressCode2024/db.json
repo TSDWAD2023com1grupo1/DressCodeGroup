@@ -1,6 +1,8 @@
-[   {
+{
+    "productos":[   {
         "idproducto": 1,
         "nombre": "Remera Code",
+        "imagen": "/assets/img/img_productos/remera_code.jpeg",
         "descripcion": "Expresa tu amor por la programación con nuestra Camiseta 'code' en letras verdes sobre negro! Esta camiseta es un homenaje a los apasionados de la codificación y la tecnología. Con un diseño sencillo pero poderoso, esta prenda te permite llevar tu pasión por el código a donde quiera que vayas. Cuenta con un diseño minimalista que presenta la palabra 'code' en letras verdes en la parte delantera, destacando tu conexión con el mundo de la programación de una manera elegante y sutil. Fabricada con algodón suave y de alta calidad, esta camiseta es cómoda de llevar durante todo el día. El ajuste clásico asegura comodidad y estilo.Agrega un toque de programación a tu estilo diario. Es perfecta para eventos informales, conferencias tecnológicas. ¡Haz tu pedido hoy mismo y lleva el código contigo!",
         "precio": "15000.0.",
         "stock": 5,
@@ -10,6 +12,7 @@
     {
         "idproducto": 2,
         "nombre": "Pantalon Binario",
+        "imagen": "/assets/img/img_productos/pantalon_binario.jpeg",
         "descripcion": " ¡Eleva tu estilo al siguiente nivel con nuestros Pantalones Binarios! Estos pantalones son mucho más que una prenda de moda. Diseñados con precisión, cada número celeste representa una parte de la base de nuestro mundo digital, el código binario. Los números celestes de código binario están hábilmente distribuidos por toda la prenda, creando un diseño único y atractivo. Estos pantalones están confeccionados con materiales de alta calidad para brindarte comodidad durante todo el día. El ajuste moderno y elegante te permitirá destacar en cualquier ocasión. Además esta prenda tiene una conversación Garantizada, ya que llevar el código binario en tu ropa no solo es una declaración de estilo, sino que también es una excelente manera de iniciar conversaciones interesantes.Versatilidad de Uso: Ya sea que los combines con una camiseta casual o una de nuestra propia tienda con un gran repertorio de opciones válidas, estos pantalones blancos son versátiles y adecuados para una variedad de ocasiones.",
         "precio": "17000.0.",
         "stock": 5,
@@ -19,6 +22,7 @@
     {
         "idproducto": 3,
         "nombre": "Remera Delete",
+        "imagen": "/assets/img/img_productos/remera_delete.jpeg",
         "descripcion": "¿Estás listo para hacer una declaración audaz y un poco irreverente? ¡Nuestra Camiseta 'delete' es la elección perfecta! Esta camiseta está diseñada para aquellos que tienen un sentido del humor único. La camiseta presenta la palabra 'delete' en la parte frontal. Es una declaración de que estás dispuesto a borrar los obstáculos de tu camino y comenzar de nuevo con determinación.Fabricada con algodón suave y de alta calidad, esta camiseta ofrece una comodidad duradera. El ajuste clásico es perfecto para usar en cualquier ocasión.Llevar 'delete' en tu camiseta no solo es una declaración de estilo, sino que también es una excelente manera de iniciar conversaciones interesantes sobre tecnología y creatividad. Combinable con todo Añade un toque de irreverencia y originalidad a tu estilo con esta camiseta única. Ya sea que trabajes en tecnología o simplemente disfrutes de la creatividad, esta prenda es un recordatorio de que a veces, presionar 'delete' es el primer paso hacia algo nuevo y emocionante. ¡Haz tu pedido hoy mismo y muestra tu actitud auda",
         "precio": "1500.0.",
         "stock": 5,
@@ -28,6 +32,7 @@
     {
         "idproducto": 4,
         "nombre": "Taza Father",
+        "imagen": "/assets/img/img_productos/taza_father.jpeg",
         "descripcion": "¿Listo para hacer una oferta que no se puede rechazar en el mundo de la programación? Presentamos 'The Code Father' en nuestra exclusiva Taza Negra con letras blancas y un toque de estilo 'El Padrino'. Esta taza rinde homenaje al legendario 'El Padrino' pero con un giro tecnológico. Presenta el texto 'The CodeFather' en letras blancas elegantes sobre un fondo negro, una combinación que refleja tu dominio en el mundo del código. Fabricada con cerámica de alta calidad, esta taza es resistente y duradera. La impresión de letras blancas en contraste destaca sobre el fondo negro, lo que la hace aún más llamativa. Con una capacidad estándar de taza de café, es perfecta para tu bebida favorita, ya sea café, té o algo más fuerte para esas largas sesiones de codificación. Ya sea en la oficina, en casa o en una reunión de desarrolladores, esta taza será el centro de atención y un punto de partida para conversaciones sobre la programación y la tecnología. ¿Conoces a un programador o desarrollador al que le encantaría esta taza? Es un regalo ideal para cumpleaños, ocasiones especiales o simplemente para sorprender a un 'Padrino del Código' en tu vida.Agrega un toque de elegancia y humor a tu espacio de trabajo o a tu rutina matutina con esta taza única. Es un recordatorio de que eres un 'Padrino del Código' y que tienes el control en el mundo de la programación. ¡Haz tu pedido hoy mismo y prepárate para codear con estilo!",
         "precio": "15000.0.",
         "stock": 5,
@@ -37,6 +42,7 @@
     {
         "idproducto": 5,
         "nombre": "Remera Null",
+        "imagen": "/assets/img/img_productos/remera_null.jpeg",
         "descripcion": "¡Haz una declaración de estilo y programación con nuestra Camiseta 'null'!Esta camiseta es perfecta para aquellos que aprecian la simplicidad y tienen un amor por la codificación. Con un diseño fresco y elegante, esta prenda te permite llevar tu pasión por la tecnología de una manera creativa y única. Presenta la palabra 'null' en letras verdes de aspecto fresco y moderno en la parte delantera. Este símbolo es conocido en la programación como un valor nulo, lo que la hace perfecta para aquellos que entienden su significado. Fabricada con algodón suave y de alta calidad, esta camiseta ofrece comodidad durante todo el día. El ajuste clásico garantiza que te veas y te sientas genial. Es versátil y se adapta a cualquier ocasión. Puedes usarla con jeans, pantalones cortos o incluso bajo una chaqueta.Regalo Ideal: ¿Conoces a un programador, desarrollador o entusiasta de la tecnología? Esta camiseta es el regalo perfecto que les mostrará tu aprecio por su pasión.Añade un toque de programación a tu estilo diario con esta camiseta única. Ya sea que estés trabajando en un proyecto de software o simplemente deseas destacar tu amor por la tecnología, 'null' es la declaración perfecta. ¡Haz tu pedido hoy mismo y muestra tu conexión con el mundo de la codificación!",
         "precio": "13000.0.",
         "stock": 5,
@@ -46,6 +52,7 @@
     {
         "idproducto": 6,
         "nombre": "Mochila Code",
+        "imagen": "/assets/img/img_productos/mochila_code.jpeg",
         "descripcion": "¡Lleva tu amor por la programación a todas partes con nuestra mochila 'I Got These Muscles Writing Code'! Esta mochila es el accesorio perfecto para los apasionados de la programación y la tecnología. Con un diseño elegante en color negro y un toque de humor, esta mochila te permite llevar tus pertenencias de forma segura mientras compartes tu pasión por la codificación.El bolsillo delantero de la mochila presenta el divertido lema 'I Got These Muscles Writing Code' en letras blancas. Con varios compartimentos y un amplio espacio interior, esta mochila es ideal para llevar tu laptop, libros, dispositivos electrónicos y más. Mantén tus pertenencias organizadas y a mano. Las correas ajustables y acolchadas te brindan comodidad durante todo el día, ya sea que estés yendo a la universidad, al trabajo o a un espacio de coworking. La mochila está diseñada para ofrecer comodidad y estilo. Lleva tu equipo de programación, tus libros o cualquier cosa que necesites con estilo y humor. ¡Haz tu pedido hoy mismo y muestra al mundo tus 'músculos' de programador con orgullo",
         "precio": "15000.0.",
         "stock": 5,
@@ -55,6 +62,7 @@
     {
         "idproducto": 7,
         "nombre": "Taza idiot",
+        "imagen": "/assets/img/img_productos/taza_idiot.jpeg",
         "descripcion": "¡Añade un toque de humor y reflexión a tus mañanas con nuestra Taza 'El Ciclo Interminable'. Esta taza presenta un ciclo humorístico que todos hemos experimentado en algún momento de nuestras vidas. Comienza con un enigmático 'WHY?' (¿Por qué?), seguido de un 'What the Hell' (¿Qué diablos?) y luego al 'I am an Idiot' (Soy un idiota). Es un recordatorio de que la vida a veces nos hace cuestionarnos y reírnos de nosotros mismos. Fabricada en cerámica de alta calidad, esta taza es resistente y apta para microondas y lavavajillas. El diseño único y los colores vibrantes perduran con el tiempo. Con su capacidad estándar de taza de café, es ideal para disfrutar de tu bebida favorita mientras reflexionas sobre la vida y sus giros inesperados. ¿Conoces a alguien que siempre se pregunta '¿Por qué?' y se ríe de las situaciones absurdas de la vida? Esta taza es el regalo perfecto que les hará sonreír. Agrega una dosis de humor a tus mañanas con esta taza única que representa el ciclo interminable de preguntas de la vida. ¡Haz tu pedido hoy mismo y prepárate para disfrutar de tus bebidas con un toque de diversión y reflexió",
         "precio": "1300.0.",
         "stock": 5,
@@ -64,6 +72,7 @@
     {
         "idproducto": 8,
         "nombre": "Gorra Head",
+        "imagen": "/assets/img/img_productos/gorra_head.jpeg",
         "descripcion": " ¡Lleva la esencia del mundo digital a tu estilo con nuestra exclusiva Gorra en blanco sobre negro! Esta gorra es un tributo a la programación web y al elemento fundamental  que inicia cada página web. Con un diseño minimalista y elegante, esta gorra se convertirá en el complemento perfecto para tu estilo único y tu pasión por el desarrollo web. Esta gorra es cómoda y resistente al desgaste. El cierre ajustable permite un ajuste perfecto para cualquier tamaño de cabeza.Agrega un toque de originalidad y orgullo de desarrollador web a tu guardarropa con esta gorra única. ¡Haz tu pedido hoy mismo y muestra al mundo tu conexión con el emocionante mundo de la programación web!",
         "precio": "15000.0.",
         "stock": 5,
@@ -73,6 +82,7 @@
     {
         "idproducto": 9,
         "nombre": "Gorra Dev",
+        "imagen": "/assets/img/img_productos/gorra_dev.jpeg",
         "descripcion": " ¡Lleva tu pasión por el desarrollo a otro nivel con nuestra exclusiva Gorra 'DEV' en blanco sobre negro! La gorra presenta un diseño elegante y minimalista en color negro que se adapta a cualquier atuendo, desde casual hasta más formal. Cuenta con un diseño contemporáneo que incorpora la palabra 'DEV' en blanco, destacando tu amor por el desarrollo y la programación. Fabricada con materiales de alta calidad, esta gorra es cómoda y resistente al uso diario. El cierre ajustable garantiza un ajuste perfecto para cualquier tamaño de cabeza.¿Conoces a un entusiasta del desarrollo? Esta gorra es un regalo perfecto que mostrará tu aprecio por su pasión y dedicación. Agrega un toque de estilo y orgullo 'DEV' a tu guardarropa con esta gorra exclusiva. ¡Haz tu pedido hoy mismo y demuestra al mundo tu compromiso con el desarrollo y la tecnología!",
         "precio": "4500.0.",
         "stock": 5,
@@ -82,3 +92,4 @@
 
 
 ]
+}

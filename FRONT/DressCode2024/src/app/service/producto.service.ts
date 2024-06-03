@@ -8,7 +8,7 @@ import { Producto } from '../models/Producto'
   providedIn: 'root'
 })
 export class ProductoService {
-  private apiUrl = 'https://localhost:3000/'
+  private apiUrl = 'http://localhost:3000/productos/';
   
   // 'https://localhost:8040/productos/';
 
@@ -18,7 +18,7 @@ export class ProductoService {
     return this.http.get<Producto[]>(this.apiUrl);
   }
 
-  obtenerProducto(id: number): Observable<Producto> {
-    return this.http.get<Producto>(`${this.apiUrl}?id=${id}`);
+  obtenerProducto(idproducto: number): Observable<Producto> {
+    return this.http.get<Producto>(`${this.apiUrl}?id=${idproducto}`);
   }
 }
