@@ -103,3 +103,6 @@ export class RegistroComponent {
     
 }
     
+  
+   
+  
