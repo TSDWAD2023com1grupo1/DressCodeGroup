@@ -7,7 +7,7 @@
 ![ISPC_frontend_Angular17](https://raw.githubusercontent.com/JavierCarranza0101/imagenes-dresscodehost/main/capturas/Untitled.png)
 
 
-# PROYECTO DREES CODE GROUP
+# PROYECTO DRESS CODE GROUP
 
 ## Descripción del Proyecto: VENTA DE ACCESORIOS PARA PROGRAMADORES
 
