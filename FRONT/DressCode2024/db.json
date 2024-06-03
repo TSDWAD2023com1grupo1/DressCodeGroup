@@ -1,0 +1,32 @@
+{
+  "usuario": [
+    {
+      "id": "a9e8",
+      "nombre": "AMIGO",
+      "email": "AMIGO@GMAIL.COM",
+      "password": "Amigo1234!",
+      "repitePassword": "Amigo1234!"
+    },
+    {
+      "id": "c828",
+      "nombre": "santi",
+      "email": "santi@gmail.com",
+      "password": "Santi1234!",
+      "repitePassword": "Santi1234!"
+    },
+    {
+      "id": "eb7c",
+      "nombre": "santiago",
+      "email": "santiago@gmail.com",
+      "password": "Santiago1234!",
+      "repitePassword": "Santiago1234!"
+    },
+    {
+      "id": "51ff",
+      "nombre": "san",
+      "email": "san@gmail.com",
+      "password": "San1234!",
+      "repitePassword": "San1234!"
+    }
+  ]
+}

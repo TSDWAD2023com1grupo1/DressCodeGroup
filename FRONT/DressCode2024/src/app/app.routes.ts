@@ -10,6 +10,7 @@ import { ProductosComponent } from './pages/productos/productos.component';
 // import { LoginComponent } from './pages/login/login.component';
 import { LandingComponent } from './pages/landing/landing.component';
 import { Pagina404Component } from './pages/pagina404/pagina404.component';
+import { CarritoComponent } from './pages/carrito/carrito.component';
 import { SobreNosotrosComponent } from './pages/sobre-nosotros/sobre-nosotros.component';
 export 
 
@@ -20,8 +21,10 @@ export
         //{path: "products/:category/:productId", component: ProductDetailComponent},
         { path: 'Contacto', component: ContactoComponent },
         //{path: "**", redirectTo: "", pathMatch: "full"}
-        // {path: "login", component: LoginComponent},
-        // {path: "registro", component: RegistroComponent},
+
+        {path: "login", component: LoginComponent},
+        {path: "registro", component: RegistroComponent},
+        {path: "carrito", component: CarritoComponent},
         {path: "index", component: LandingComponent},
         {path:"", redirectTo:"/index", pathMatch:"full"},
         {path: "sobre-nosotros", component: SobreNosotrosComponent},
