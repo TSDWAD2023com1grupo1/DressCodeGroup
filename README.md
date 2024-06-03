@@ -30,6 +30,8 @@ Nombre y apellido de los integrantes y los roles:
 
 ![ISPC_landing_index](https://raw.githubusercontent.com/JavierCarranza0101/imagenes-dresscodehost/main/capturas/localhost_4200_productos%20landing.png)
 
+![ISPC_registro](https://raw.githubusercontent.com/JavierCarranza0101/imagenes-dresscodehost/main/capturas/localhost_4200_registro.png)
+
 ![ISPC_productos](https://raw.githubusercontent.com/JavierCarranza0101/imagenes-dresscodehost/main/capturas/localhost_4200_productos.png)
 
 ![ISPC_carrito](https://raw.githubusercontent.com/JavierCarranza0101/imagenes-dresscodehost/main/capturas/localhost_4200_carrito.png)
