@@ -12,7 +12,7 @@ import { ProductosComponent } from './pages/productos/productos.component';
 
 import { DashboardComponent } from './pages/dashboard/dashboard.component';
 import { LoginComponent } from './pages/login/login.component';
-import { RegistroComponent } from './pages/registro/registro.component';
+//import { RegistroComponent } from './pages/registro/registro.component';
 
 import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 import { SobreNosotrosComponent } from './pages/sobre-nosotros/sobre-nosotros.component';
@@ -22,7 +22,7 @@ import { SobreNosotrosComponent } from './pages/sobre-nosotros/sobre-nosotros.co
   standalone: true,
   
 
-imports: [RouterOutlet,HeaderComponent, DashboardComponent, LandingComponent, ProductosComponent,FooterComponent, ContactoComponent, FontAwesomeModule, SobreNosotrosComponent, LoginComponent, RegistroComponent],
+imports: [RouterOutlet,HeaderComponent, DashboardComponent, LandingComponent, ProductosComponent,FooterComponent, ContactoComponent,FontAwesomeModule, SobreNosotrosComponent, LoginComponent, ], // RegistroComponent
 
 
 
