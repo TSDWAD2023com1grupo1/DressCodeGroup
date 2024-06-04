@@ -1,3 +1,5 @@
+![ISPC_frontend_Angular17](https://raw.githubusercontent.com/JavierCarranza0101/imagenes-dresscodehost/main/capturas/Untitled.png)
+
 # DRESSCODE | BACKEND | Sprint 2
 
 DJANGO VERSION
@@ -46,5 +48,13 @@ Todos los scripts de cada tabla estan en la carpeta DATA EXPORT.
   ####  "pedidos" /api/v1pedidos/
   ####  "articulos_pedido" /api/v1articulos_pedido/
   ####  "pagos" /api/v1pagos/
+
+---
+
+![ISPC_admin_productos](https://github.com/TSDWAD2023com1grupo1/DressCodeGroup/blob/develop2024/BACK/SPRINT%202/CAPTURAS%20DE%20BACK%20FUNCIONANDO/django%20admin%20productos.png)
+
+---
+
+![ISPC_apis](https://github.com/TSDWAD2023com1grupo1/DressCodeGroup/blob/develop2024/BACK/SPRINT%202/CAPTURAS%20DE%20BACK%20FUNCIONANDO/api%20rest%20con%20sus%20endpoints.png)
 
 
