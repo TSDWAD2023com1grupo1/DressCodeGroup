@@ -1,0 +1,410 @@
+h2{ font-size: 2.5em;
+    color: white 
+}
+p{ font-size: 1.5em;
+    text-align: center;
+    margin-right: 5%;
+}
+#hero {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    height: 80vh;
+    
+    background-size: cover;
+    gap: 10px;
+    overflow: hidden;
+    color: rgb(95, 16, 222);
+    background-image:linear-gradient(
+        0deg,
+        rgba(0,0,0,0.5),
+        rgba(0,0,0,0.5)
+    )
+}
+
+#heroimagen {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 5%;
+}
+
+#heroimagen img {
+    max-width: 100%;
+    height: auto;
+}
+
+#hero-texto {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 20px;
+}
+
+#hero-texto h2 {
+    font-size: 2rem;
+}
+
+#hero-texto nav ul {
+    list-style: none;
+    padding: 0;
+}
+
+#hero-texto nav li {
+    display: inline;
+    margin-right: 10px;
+}
+
+#hero-texto nav li:last-child {
+    margin-right: 0;
+}
+
+#hero-texto nav a {
+    color: white;
+    text-decoration: none;
+}
+html{scroll-behavior: smooth;}
+#hero-texto nav a:hover {
+    text-decoration: underline
+
+}
+@media (max-width: 650px) {
+    #hero {
+        grid-template-columns: 1fr;
+        height: auto;
+        
+    }
+    
+    #heroimagen {
+        margin-top: 20px;
+
+    }
+
+    #hero-texto {
+        text-align: center;
+        margin-top: 60px;
+        
+    }
+
+    #hero-texto h2 {
+                
+        font-size: 2.5rem;
+    }
+    #hero-texto h4{
+        margin-left: 30% auto;
+        justify-content: center;
+    }
+    #hero-texto li{
+        text-align: justify;
+    }
+}
+
+
+
+#hero h2{
+    color: white;
+}
+
+button{/*boton galeria*/
+
+    background-color: rgb(111, 111, 241);
+    color:white;
+    border: 1px solid rgba(0,0,0,0.5);
+    border-radius: 10px;
+    padding: 10px 80px;
+    cursor: pointer;
+    box-shadow: 2px 2px 10px rgba(0,0,0,0.5);
+
+}
+
+ 
+
+button:hover{
+
+    background-color: rgb(41, 41, 215);;
+
+}
+
+#envios .conteiner{
+    
+    text-align: center;
+    padding: 80px 12px;
+    
+    
+}
+
+#somos .conteiner{
+    
+    text-align: center;
+    padding: 80px 12px;
+    
+}
+
+.paquete{
+
+    max-width: 1400px;
+    margin: auto;
+    width:80%;
+    background-color: #6972a0; /* Color de fondo del cuadrado */
+    border-radius: 20px;
+    overflow: hidden;
+    border: 3px solid #887a7a; /* Borde sólido de 2px de grosor */
+    box-shadow: 0px 4px 9px rgba(0, 0, 0, 0.6)
+
+}
+
+.paquete .img-paquete{
+    
+    background-color: #7781b3;
+    padding-left: 35%;
+    padding-right: 35%;
+    padding-top: 2%;
+    border-bottom: 2px solid #887a7a; 
+    
+}
+@media (max-width: 700px){
+
+
+.paquete img{
+    
+    width: 50px;
+    
+}
+}
+#galeria .conteiner{
+
+    text-align: center;
+    padding: 80px 12px;
+    
+}
+
+.paquete1{
+
+    max-width: 1400px;
+    margin: auto;
+   width:80%;
+
+}
+
+#redes_soc .conteiner{
+
+    text-align: center;
+    padding: 80px 0px;
+
+}
+
+
+.paquete2{
+
+    max-width: 1400px;
+    margin: auto;
+   width:80%;
+
+}
+
+
+#redes_soc .conteiner{
+
+    display: flex;
+    justify-content: space-evenly;
+
+}
+
+#redes_soc .paquete{
+
+    width: 85%;
+    max-width: 600px;
+    text-align: center;
+    
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+
+}
+
+@media (min-width: 800px){
+
+    #somos .conteiner{
+    
+        display: flex;
+        justify-content: space-evenly;
+        padding-left: 100px;
+
+    }
+
+    #somos .paquete{
+    
+        width: 50%;
+        max-width: 600px;
+        text-align: initial      center;
+        padding-left: 0px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+    }
+
+    #somos .img-conteiner{
+
+        background-image: url("../../../assets/img/img_quienes_somos/gente-min.png");
+        background-size: cover;
+        background-position: center center;
+        height: 300px;
+        width: 400px;
+
+    }
+
+    #galeria .conteiner{
+    
+        display: flex;
+     justify-content: center;
+        padding-right: 100px;  
+
+    }
+
+    #galeria .img-conteiner{
+
+        background-image: url("../../../assets/img/img_quienes_somos/galery.png");
+        background-size: cover;
+        background-position: center center;
+        height: 300px;
+        width: 400px;
+
+    }
+
+    #galeria .paquete{
+
+        width: 50%;
+        max-width: 600px;
+        text-align: initial center;
+        padding-left: 0px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        background-position: right right;
+
+    }
+
+    #envios .conteiner{
+
+        display: flex;
+        justify-content: space-evenly;
+        padding-left: 100px;
+
+    }
+
+    #envios .paquete{
+
+        width: 50%;
+        max-width: 600px;
+        text-align: initial center;
+        padding-left: 0px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+    }
+
+    #envios .img-conteiner{
+
+        background-image: url("../../../assets/img/img_quienes_somos/logistica.png");
+        background-size: cover;
+        background-position: center center;
+        height: 300px;
+        width: 400px;
+
+    }
+
+    #redes_soc .conteiner{
+
+        display: flex;
+        justify-content: left;
+        padding-right: 90px;
+
+    }
+
+    #redes_soc .img-conteiner{
+
+        background-image: url("../../../assets/img/img_quienes_somos/red-social-removebg-preview.png");
+        background-size: cover;
+        background-position: center center;
+        height: 300px;
+        width:400px;
+    }
+           
+}
+
+
+#programadores{
+
+    background-color: rgb(60, 30, 30);
+    color: white;
+    text-align: center;
+    align-self:center;
+    
+    
+}
+#programadores .titulo_team{
+    padding-bottom: 20px;
+    text-align: center center;
+}
+
+#programadores .conteiner{
+    padding: 80px;
+}
+
+
+.grid-container {
+    
+    display: grid;
+    grid-template-columns: repeat(7, 4fr) ;
+ 
+    justify-content: center;
+
+    gap: 0.2cm; /* Espacio entre las personas */
+    align-self: center ;
+    /* Media query para pantallas más pequeñas */
+    }
+
+@media screen and (max-width: 954px) {
+       .grid-container {
+            grid-template-columns: repeat(5, 1fr);
+        
+        
+        }
+   
+  
+}
+
+@media screen and (max-width: 800px) {
+       .grid-container {
+           grid-template-columns: repeat(3, 1fr); /* Dos columnas en pantallas medianas */
+       }
+   }
+
+ @media screen and (max-width: 450px) {
+      .grid-container {
+            display: flex;
+            flex-wrap: wrap; /* Cambiar a un diseño de una sola columna */
+            justify-content: center;
+        }
+ 
+
+    }
+/* Estilo para cada persona */
+.persona {
+
+flex-direction: column;
+justify-content:space-between;
+align-self:center;
+height: 100%;
+padding: 5px;
+border: 1px solid #671E1E;
+background-color: rgb(30,30,30);
+}
+
+.persona img {
+ align-self:center;
+ align-items: center;
+ width:50%;
+ border-radius:50%;
+
+ 
+}

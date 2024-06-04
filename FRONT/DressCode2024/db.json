@@ -1,0 +1,46 @@
+{
+  "usuario": [
+    {
+      "id": "1",
+      "nombre": "AMIGO",
+      "email": "AMIGO@GMAIL.COM",
+      "password": "Amigo1234!",
+      "repitePassword": "Amigo1234!"
+    },
+    {
+      "id": "2",
+      "nombre": "santi",
+      "email": " dadas@fms.com ",
+      "password": "Santi1234!",
+      "repitePassword": "Santi1234!"
+    },
+    {
+      "id": "3",
+      "nombre": "santiago",
+      "email": "santiago@gmail.com",
+      "password": "Santiago1234!",
+      "repitePassword": "Santiago1234!"
+    },
+    {
+      "id": "4",
+      "nombre": "san",
+      "email": "san@gmail.com",
+      "password": "San1234!",
+      "repitePassword": "San1234!"
+    },
+    {
+      "id": "f4d4",
+      "nombre": "santiago",
+      "email": "santi@gmail.com",
+      "password": "Santi1234!",
+      "repitePassword": "Santi1234!"
+    },
+    {
+      "id": "d016",
+      "nombre": "Noah",
+      "email": "Noah@gmail.com",
+      "password": "Noah1234!",
+      "repitePassword": "Noah1234!"
+    }
+  ]
+}

@@ -5,7 +5,8 @@ form {
   background: rgba(0, 0, 0, 0.4);
   padding: 10px 20px;
   box-sizing: border-box;
-  margin-top: 100px;
+  margin-top: 40px;
+  margin-bottom: 50px;
   border-radius: 7px;
 }
 
@@ -20,7 +21,7 @@ h2 {
 input,
 textarea {
   width: 100%;
-  margin-bottom: 20px;
+  margin-bottom: 10px;
   padding: 7px;
   box-sizing: border-box;
   font-size: 17px;
@@ -37,10 +38,13 @@ textarea {
   background: rgb(149, 35, 35, 0.5);
   color: rgb(255, 255, 255);
   padding: 20px;
+  border-radius: 7px;
 }
 
-#boton :hover {
+#boton:hover {
   cursor: pointer;
+  color: rgb(207, 83, 83);
+  
 }
 
 @media (max-widht: 480px) {
