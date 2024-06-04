@@ -9,7 +9,8 @@
 
 # PROYECTO DRESS CODE GROUP
 
-## Descripción del Proyecto: VENTA DE ACCESORIOS PARA PROGRAMADORES
+## Descripción del Proyecto: 
+### Venta de accesorios para programadores
 
 Crear una tienda en línea especializada en la venta de accesorios, ropa y tazas diseñados específicamente para programadores, ofreciendo productos únicos y de alta calidad que reflejen la pasión por la programación y la tecnología, y proporcionando una experiencia de compra fácil y satisfactoria para nuestra comunidad de desarrolladores.
 
