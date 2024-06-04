@@ -13,16 +13,17 @@ import { Usuario } from '../../models/LoginRequest';
 })
 export class LoginComponent {
   form: FormGroup;
-
   constructor(
     private formBuilder: FormBuilder,
     private loginService: LoginService,
     private router: Router
   ) {
+
     this.form = this.formBuilder.group({
       email: ['', [Validators.required, Validators.email]],
       password: ['', [Validators.required, Validators.minLength(8)]]
     });
+
   }
 
   onEnviar(event: Event) {
