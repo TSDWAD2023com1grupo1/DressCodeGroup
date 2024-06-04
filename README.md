@@ -37,11 +37,10 @@ Nombre y apellido de los integrantes y los roles:
 ![ISPC_carrito](https://raw.githubusercontent.com/JavierCarranza0101/imagenes-dresscodehost/main/capturas/localhost_4200_carrito.png)
 
 
-Link del Repositorio de Repositorio anterior:
+#### Link del Repositorio de Repositorio anterior:
 https://github.com/TSDWAD2023com1grupo1/trabajointegradorgrup1
 
-Link wiki actual:
-
+#### Link wiki actual:
 https://github.com/TSDWAD2023com1grupo1/DressCodeGroup/wiki
 
 
