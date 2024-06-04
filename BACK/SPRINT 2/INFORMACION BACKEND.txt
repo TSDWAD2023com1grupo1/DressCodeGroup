@@ -1,0 +1,21 @@
+DJANGO VERSION
+4.2.13
+
+PYTHON VERSION
+3.8.0
+
+
+DATABASE
+name: "dresscode_2"
+user: "root"
+password: "admin"
+host: "localhost"
+port: "3306"
+MySQL Workbench
+
+
+
+SUPERUSER:
+Username: "admin"
+pass: "admin1234"
+email: "admin@gmail.com"
