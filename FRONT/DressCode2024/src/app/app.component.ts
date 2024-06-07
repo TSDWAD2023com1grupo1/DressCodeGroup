@@ -5,6 +5,7 @@ import { ContactoComponent } from './pages/contacto/contacto.component';
 
 import { FooterComponent } from './shared/footer/footer.component';
 
+
 import { LandingComponent } from './pages/landing/landing.component';
 
 import { ProductosComponent } from './pages/productos/productos.component';
@@ -19,19 +20,12 @@ import { SobreNosotrosComponent } from './pages/sobre-nosotros/sobre-nosotros.co
 @Component({
   selector: 'app-root',
   standalone: true,
-  imports: [
-    RouterOutlet,
-    HeaderComponent,
-    DashboardComponent,
-    LandingComponent,
-    ProductosComponent,
-    FooterComponent,
-    ContactoComponent,
-    FontAwesomeModule,
-    SobreNosotrosComponent,
-    LoginComponent,
-    RegistroComponent,
-  ],
+  
+
+imports: [RouterOutlet,HeaderComponent, DashboardComponent, LandingComponent, ProductosComponent,FooterComponent, ContactoComponent, FontAwesomeModule, SobreNosotrosComponent, LoginComponent, RegistroComponent],
+
+
+
   templateUrl: './app.component.html',
   styleUrl: './app.component.css',
 })

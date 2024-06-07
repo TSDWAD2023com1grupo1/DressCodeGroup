@@ -1,7 +1,7 @@
 import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
-import { BehaviorSubject, Observable, of, throwError } from 'rxjs';
-import { catchError, map, tap } from 'rxjs/operators';
+import { BehaviorSubject, Observable, tap, catchError, of } from 'rxjs';
+import { throwError } from 'rxjs';
 import Swal from 'sweetalert2';
 import { Usuario } from '../../models/LoginRequest'; // Asegúrate de importar el modelo Usuario
 
@@ -14,39 +14,35 @@ export class LoginService {
 
   constructor(private http: HttpClient) {}
 
-  login(usuario: Usuario): Observable<boolean> {
-    return this.http.get<Usuario[]>(`${this.url}?email=${usuario.email}&& password=${usuario.password}`)
+  login(usuario: Usuario): Observable<any> {
+    return this.http.post<{ authenticated: boolean }>(this.url, usuario)
       .pipe(
-        map(users => {
-          if (users.length > 0) {
-            console.log("Login successful:", users[0]);
+        tap(response => {
+          if (response.authenticated) {
+            console.log("Login successful:", response);
             this.isLogginOn.next(true);
-           
-            return true;
+            
           } else {
             console.error("Authentication failed");
             this.isLogginOn.next(false);
-            return false;
           }
         }),
         catchError(error => {
           console.error("Login error:", error);
           this.isLogginOn.next(false);
-          return of(false);
+          return of(error);
         })
       );
   }
 
-  get authenticated(): boolean {
+  get estaAutenticado(): boolean {
     return this.isLogginOn.value;
   }
 
   get isLogginOn$(): Observable<boolean> {
     return this.isLogginOn.asObservable();
   }
-
   logOut() {
     this.isLogginOn.next(false); 
   }
 }
-

@@ -1,6 +1,4 @@
 export class Usuario{
-    id?:number;
-    email:string="";
-    password:string="";
-    nombre?:string;
-}   
+    Email:string="";
+    Password:string="";
+}
