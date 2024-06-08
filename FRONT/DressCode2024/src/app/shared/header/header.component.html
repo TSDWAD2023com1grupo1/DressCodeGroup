@@ -1,29 +1,39 @@
 
+<header  class="position-static navbar navbar-expand-lg" >
 
-
-<header  class="position-static navbar navbar-expand-lg">
-    
-    
-    <div class="logo">
-        <img src="../../../assets/img/logo.jpeg" alt="logo">
-    </div>   
-    <nav>
-        <ul>
-            <!-- <li><a href="./FRONT/pages/login.html"><img src="./FRONT/img/img_login/login-icon.png" alt=""></a></li> -->
-
-           
-            <li><a routerLink="/registro" class="text-black">Registro</a></li>
-            <li><a routerLink="/login" ><img src="../../../assets/img/img_login/login-icon.png" alt="imagen del login"></a></li>
-            <li><a routerLink="/index">Inicio</a></li>
-            <li><a routerLink="/productos">Productos</a></li>
-            <li><a routerLink="/mis-compras">Mis Compras</a></li>      
-            <li><a routerLink="/sobre-nosotros">Sobre Nosotros</a></li>
-          <li><a routerLink="/Contacto">Contacto</a></li>
-          <li><a routerLink="/carrito" ><img src="../../../assets/img/img_carrito/carrito_logo2.png" alt="imagen del login"></a></li>
+    <div class="container-fluid" >
+        <div class="logo">
+            <img src="../../../assets/img/logo.jpeg" alt="logo">
+        </div>   
         
-        </ul>
-    </nav>
-
-
-
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+          aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <nav class="navbar navbar-expand-lg">
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">  
+            <ul class="navbar-nav mr-auto  d-flex align-items-center">
+                @if (estaAutenticado)
+                    {
+                        <li class="nav-item"><i class="fa-solid fa-arrow-right-from-bracket fa-lg" (click)="logOut()" style="color: #000000;"></i></li>
+                        <li class="nav-item"><a class="nav-link" routerLink="/mis-compras">Mis Compras</a></li>
+                    }
+                @else
+                    {    
+                        <li class="nav-item"><a class="nav-link" routerLink="/registro" class="text-black">Registro</a></li>
+                        <li class="nav-item"><a class="nav-link" routerLink="/login" ><img src="../../../assets/img/img_login/login-icon.png" alt="imagen del login"></a></li>
+                    }
+                <li class="nav-item"><a class="nav-link" routerLink="/index">Inicio</a></li>
+                <li class="nav-item"><a class="nav-link" routerLink="/productos">Productos</a></li>
+                <li class="nav-item"><a class="nav-link" routerLink="/sobre-nosotros">Sobre Nosotros</a></li>
+                <li class="nav-item"><a routerLink="/Contacto">Contacto</a></li>
+                <li class="nav-item"><a routerLink="/carrito" ><img src="../../../assets/img/img_carrito/carrito_logo2.png" alt="imagen del login"></a></li>
+            </ul>
+        </div>
+        </nav>
+        
+    </div>
+    
+    
 </header>
+    
