@@ -69,14 +69,12 @@ export class RegistroComponent {
           this.registroService.crearUsuario(this.formRegister.value as Usuario).subscribe(data => {
             console.log(data.id);
             console.log( this.formRegister.value as Usuario)
-            if (data.id>0)
-            {
-            alert("El registro ha sido creado satisfactoriamente. A continuación, por favor Inicie Sesión.");
-            this.router.navigate(['/login'])
-            }
-            else{return console.log("error en el registro")}
+          if (data.id>0)
+          {
+           alert("El registro ha sido creado satisfactoriamente. A continuación, por favor Inicie Sesión.");
+           this.router.navigate(['/login'])
           }
-          
+          }
         )
         }
         else{

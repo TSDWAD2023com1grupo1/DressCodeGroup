@@ -7,7 +7,7 @@ import { Usuario } from '../../models/Usuarios';
   providedIn: 'root'
 })
 export class RegistroService {
-  url="http://localhost:3000/usuario";
+  url="http://localhost:8000/api/v1usuarios/";
   constructor(private http:HttpClient,) { 
     
     this.http.post<Usuario>(this.url, Usuario);
@@ -19,6 +19,7 @@ export class RegistroService {
   }
 
 }
+
 
 
 
