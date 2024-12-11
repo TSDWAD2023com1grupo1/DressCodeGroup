@@ -1,6 +1,6 @@
 -- Creación de la base de datos
-CREATE DATABASE IF NOT EXISTS dresscode_2;
-USE dresscode_2;
+CREATE DATABASE IF NOT EXISTS dresscode_3;
+USE dresscode_3;
 
 
 CREATE TABLE `categorias` (
@@ -8,7 +8,7 @@ CREATE TABLE `categorias` (
   `nombre_categoria` varchar(100) NOT NULL,
   `descripcion` text,
   PRIMARY KEY (`id_categoria`)
-)
+);
 
 
 
@@ -19,7 +19,7 @@ CREATE TABLE `usuarios` (
   `password` varchar(255) NOT NULL,
   PRIMARY KEY (`id_usuario`),
   UNIQUE KEY `email` (`email`)
-)
+);
 
 
 
@@ -39,7 +39,7 @@ CREATE TABLE `productos` (
   PRIMARY KEY (`id_producto`),
   KEY `id_categoria` (`id_categoria`),
   CONSTRAINT `productos_ibfk_1` FOREIGN KEY (`id_categoria`) REFERENCES `categorias` (`id_categoria`)
-)
+);
 
 
 
@@ -51,7 +51,7 @@ CREATE TABLE `carritos` (
   PRIMARY KEY (`id_carrito`),
   KEY `id_usuario` (`id_usuario`),
   CONSTRAINT `carritos_ibfk_1` FOREIGN KEY (`id_usuario`) REFERENCES `usuarios` (`id_usuario`)
-)
+);
 
 
 
@@ -66,7 +66,7 @@ CREATE TABLE `articulos_carrito` (
   KEY `id_producto` (`id_producto`),
   CONSTRAINT `articulos_carrito_ibfk_1` FOREIGN KEY (`id_carrito`) REFERENCES `carritos` (`id_carrito`),
   CONSTRAINT `articulos_carrito_ibfk_2` FOREIGN KEY (`id_producto`) REFERENCES `productos` (`id_producto`)
-)
+);
 
 
 
@@ -80,7 +80,7 @@ CREATE TABLE `pedidos` (
   PRIMARY KEY (`id_pedido`),
   KEY `id_usuario` (`id_usuario`),
   CONSTRAINT `pedidos_ibfk_1` FOREIGN KEY (`id_usuario`) REFERENCES `usuarios` (`id_usuario`)
-)
+);
 
 
 
@@ -96,7 +96,7 @@ CREATE TABLE `articulos_pedido` (
   KEY `id_producto` (`id_producto`),
   CONSTRAINT `articulos_pedido_ibfk_1` FOREIGN KEY (`id_pedido`) REFERENCES `pedidos` (`id_pedido`),
   CONSTRAINT `articulos_pedido_ibfk_2` FOREIGN KEY (`id_producto`) REFERENCES `productos` (`id_producto`)
-)
+);
 
 
 
@@ -109,7 +109,7 @@ CREATE TABLE `pagos` (
   PRIMARY KEY (`id_pago`),
   KEY `id_pedido` (`id_pedido`),
   CONSTRAINT `pagos_ibfk_1` FOREIGN KEY (`id_pedido`) REFERENCES `pedidos` (`id_pedido`)
-)
+);
 
 
 
@@ -122,5 +122,5 @@ CREATE TABLE `envios` (
   PRIMARY KEY (`id_envio`),
   KEY `id_pedido` (`id_pedido`),
   CONSTRAINT `envios_ibfk_1` FOREIGN KEY (`id_pedido`) REFERENCES `pedidos` (`id_pedido`)
-)
+);
 

@@ -1,6 +1,6 @@
 ----Crear la estrutura de la base de datos-----
 
-La base de datos dresscode_2 puede generarse con el script "Script CREAR tablas DB dresscode_2".
+La base de datos dresscode_3 puede generarse con el script "Script CREAR tablas DB dresscode_2".
 En caso de error se pueden generar tabla por tabla, desde arriba hacia abajo, una a una.
 
 
