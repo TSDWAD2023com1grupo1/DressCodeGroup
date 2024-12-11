@@ -9,7 +9,7 @@ import { Usuario } from '../../models/LoginRequest'; // Asegúrate de importar e
   providedIn: 'root'
 })
 export class LoginService {
-  url = "http://localhost:3000/usuario";
+  url = "db.json";
   private isLogginOn = new BehaviorSubject<boolean>(false);
 
   constructor(private http: HttpClient) {}

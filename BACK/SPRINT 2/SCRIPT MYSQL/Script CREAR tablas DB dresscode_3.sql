@@ -2,125 +2,101 @@
 CREATE DATABASE IF NOT EXISTS dresscode_3;
 USE dresscode_3;
 
-
-CREATE TABLE `categorias` (
-  `id_categoria` int NOT NULL AUTO_INCREMENT,
-  `nombre_categoria` varchar(100) NOT NULL,
-  `descripcion` text,
-  PRIMARY KEY (`id_categoria`)
+-- Tabla de Categorías
+CREATE TABLE categoria (
+  id_categoria INT NOT NULL AUTO_INCREMENT,
+  nombre_categoria VARCHAR(100) NOT NULL,
+  descripcion TEXT,
+  parent_id INT DEFAULT NULL,
+  PRIMARY KEY (id_categoria),
+  FOREIGN KEY (parent_id) REFERENCES categoria(id_categoria)
 );
 
-
-
-CREATE TABLE `usuarios` (
-  `id_usuario` int NOT NULL AUTO_INCREMENT,
-  `nombre` varchar(100) NOT NULL,
-  `email` varchar(100) NOT NULL,
-  `password` varchar(255) NOT NULL,
-  PRIMARY KEY (`id_usuario`),
-  UNIQUE KEY `email` (`email`)
+-- Tabla de Usuarios
+CREATE TABLE usuario (
+  id_usuario INT NOT NULL AUTO_INCREMENT,
+  nombre VARCHAR(100) NOT NULL,
+  email VARCHAR(100) NOT NULL UNIQUE,
+  password VARCHAR(255) NOT NULL,
+  direccion VARCHAR(255),
+  telefono VARCHAR(20),
+  rol ENUM('usuario', 'administrador') DEFAULT 'usuario',
+  created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
+  updated_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP,
+  PRIMARY KEY (id_usuario)
 );
 
-
-
-
-
-
-
-
-CREATE TABLE `productos` (
-  `id_producto` int NOT NULL AUTO_INCREMENT,
-  `nombre_producto` varchar(100) NOT NULL,
-  `imagen` varchar(500) DEFAULT NULL,
-  `descripcion` LONGTEXT,
-  `precio` decimal(10,2) NOT NULL,
-  `stock` int NOT NULL,  
-  `id_categoria` int DEFAULT NULL,
-  PRIMARY KEY (`id_producto`),
-  KEY `id_categoria` (`id_categoria`),
-  CONSTRAINT `productos_ibfk_1` FOREIGN KEY (`id_categoria`) REFERENCES `categorias` (`id_categoria`)
+-- Tabla de Productos
+CREATE TABLE producto (
+  id_producto INT NOT NULL AUTO_INCREMENT,
+  nombre_producto VARCHAR(100) NOT NULL,
+  imagen VARCHAR(500),
+  descripcion LONGTEXT,
+  precio DECIMAL(10,2) NOT NULL,
+  stock INT NOT NULL,
+  id_categoria INT NOT NULL,
+  created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
+  updated_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP,
+  PRIMARY KEY (id_producto),
+  FOREIGN KEY (id_categoria) REFERENCES categoria(id_categoria)
 );
 
-
-
-
-CREATE TABLE `carritos` (
-  `id_carrito` int NOT NULL AUTO_INCREMENT,
-  `id_usuario` int DEFAULT NULL,
-  `fecha_creacion` timestamp NULL DEFAULT CURRENT_TIMESTAMP,
-  PRIMARY KEY (`id_carrito`),
-  KEY `id_usuario` (`id_usuario`),
-  CONSTRAINT `carritos_ibfk_1` FOREIGN KEY (`id_usuario`) REFERENCES `usuarios` (`id_usuario`)
+-- Tabla de Carritos
+CREATE TABLE carrito (
+  id_carrito INT NOT NULL AUTO_INCREMENT,
+  id_usuario INT NOT NULL,
+  session_id VARCHAR(255) UNIQUE,
+  fecha_creacion TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
+  PRIMARY KEY (id_carrito),
+  FOREIGN KEY (id_usuario) REFERENCES usuario(id_usuario)
 );
 
-
-
-
-CREATE TABLE `articulos_carrito` (
-  `id_articulo` int NOT NULL AUTO_INCREMENT,
-  `id_carrito` int DEFAULT NULL,
-  `id_producto` int DEFAULT NULL,
-  `cantidad` int NOT NULL,
-  PRIMARY KEY (`id_articulo`),
-  KEY `id_carrito` (`id_carrito`),
-  KEY `id_producto` (`id_producto`),
-  CONSTRAINT `articulos_carrito_ibfk_1` FOREIGN KEY (`id_carrito`) REFERENCES `carritos` (`id_carrito`),
-  CONSTRAINT `articulos_carrito_ibfk_2` FOREIGN KEY (`id_producto`) REFERENCES `productos` (`id_producto`)
+-- Tabla de Artículos en el Carrito
+CREATE TABLE articulo_carrito (
+  id_articulo INT NOT NULL AUTO_INCREMENT,
+  id_carrito INT NOT NULL,
+  id_producto INT NOT NULL,
+  cantidad INT NOT NULL,
+  PRIMARY KEY (id_articulo),
+  FOREIGN KEY (id_carrito) REFERENCES carrito(id_carrito),
+  FOREIGN KEY (id_producto) REFERENCES producto(id_producto)
 );
 
-
-
-
-CREATE TABLE `pedidos` (
-  `id_pedido` int NOT NULL AUTO_INCREMENT,
-  `id_usuario` int DEFAULT NULL,
-  `fecha_pedido` timestamp NULL DEFAULT CURRENT_TIMESTAMP,
-  `total` decimal(10,2) NOT NULL,
-  `estado` enum('pendiente','completado','cancelado') DEFAULT 'pendiente',
-  PRIMARY KEY (`id_pedido`),
-  KEY `id_usuario` (`id_usuario`),
-  CONSTRAINT `pedidos_ibfk_1` FOREIGN KEY (`id_usuario`) REFERENCES `usuarios` (`id_usuario`)
+-- Tabla de Pedidos
+CREATE TABLE pedido (
+  id_pedido INT NOT NULL AUTO_INCREMENT,
+  id_usuario INT NOT NULL,
+  fecha_pedido TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
+  total DECIMAL(10,2) NOT NULL,
+  estado ENUM('pendiente', 'completado', 'cancelado') DEFAULT 'pendiente',
+  metodo_pago ENUM('tarjeta_credito', 'paypal', 'transferencia') NOT NULL,
+  created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
+  updated_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP,
+  PRIMARY KEY (id_pedido),
+  FOREIGN KEY (id_usuario) REFERENCES usuario(id_usuario)
 );
 
-
-
-
-CREATE TABLE `articulos_pedido` (
-  `id_articulo_pedido` int NOT NULL AUTO_INCREMENT,
-  `id_pedido` int DEFAULT NULL,
-  `id_producto` int DEFAULT NULL,
-  `cantidad` int NOT NULL,
-  `precio` decimal(10,2) NOT NULL,
-  PRIMARY KEY (`id_articulo_pedido`),
-  KEY `id_pedido` (`id_pedido`),
-  KEY `id_producto` (`id_producto`),
-  CONSTRAINT `articulos_pedido_ibfk_1` FOREIGN KEY (`id_pedido`) REFERENCES `pedidos` (`id_pedido`),
-  CONSTRAINT `articulos_pedido_ibfk_2` FOREIGN KEY (`id_producto`) REFERENCES `productos` (`id_producto`)
+-- Tabla de Artículos en el Pedido
+CREATE TABLE articulo_pedido (
+  id_articulo_pedido INT NOT NULL AUTO_INCREMENT,
+  id_pedido INT NOT NULL,
+  id_producto INT NOT NULL,
+  cantidad INT NOT NULL,
+  precio DECIMAL(10,2) NOT NULL,
+  PRIMARY KEY (id_articulo_pedido),
+  FOREIGN KEY (id_pedido) REFERENCES pedido(id_pedido),
+  FOREIGN KEY (id_producto) REFERENCES producto(id_producto)
 );
 
-
-
-CREATE TABLE `pagos` (
-  `id_pago` int NOT NULL AUTO_INCREMENT,
-  `id_pedido` int DEFAULT NULL,
-  `monto` decimal(10,2) NOT NULL,
-  `fecha_pago` timestamp NULL DEFAULT CURRENT_TIMESTAMP,
-  `metodo_pago` enum('tarjeta_credito','paypal','transferencia') NOT NULL,
-  PRIMARY KEY (`id_pago`),
-  KEY `id_pedido` (`id_pedido`),
-  CONSTRAINT `pagos_ibfk_1` FOREIGN KEY (`id_pedido`) REFERENCES `pedidos` (`id_pedido`)
+-- Tabla de Envíos
+CREATE TABLE envio (
+  id_envio INT NOT NULL AUTO_INCREMENT,
+  id_pedido INT NOT NULL,
+  direccion_envio VARCHAR(255) NOT NULL,
+  fecha_envio TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
+  estado_envio ENUM('preparando', 'enviado', 'entregado') DEFAULT 'preparando',
+  PRIMARY KEY (id_envio),
+  FOREIGN KEY (id_pedido) REFERENCES pedido(id_pedido)
 );
 
-
-
-CREATE TABLE `envios` (
-  `id_envio` int NOT NULL AUTO_INCREMENT,
-  `id_pedido` int DEFAULT NULL,
-  `direccion_envio` varchar(255) NOT NULL,
-  `fecha_envio` timestamp NULL DEFAULT CURRENT_TIMESTAMP,
-  `estado_envio` enum('preparando','enviado','entregado') DEFAULT 'preparando',
-  PRIMARY KEY (`id_envio`),
-  KEY `id_pedido` (`id_pedido`),
-  CONSTRAINT `envios_ibfk_1` FOREIGN KEY (`id_pedido`) REFERENCES `pedidos` (`id_pedido`)
-);
 

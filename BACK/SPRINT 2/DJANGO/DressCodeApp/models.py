@@ -9,15 +9,15 @@ class Usuario(AbstractUser):
     password = models.CharField(max_length=255)
     direccion = models.CharField(max_length=255, blank=True, null=True)
     telefono = models.CharField(max_length=20, blank=True, null=True)
-    rol = models.CharField(max_length=20, choices=[('cliente', 'Cliente'), ('administrador', 'Administrador')], default='cliente')
+    rol = models.CharField(max_length=20, choices=[('usuario', 'Usuario'), ('administrador', 'Administrador')], default='cliente')
     created_at = models.DateTimeField(auto_now_add=True)
-    updated_at = models.DateTimeField(auto_now=True)
+    last_login = AbstractUser
+
 
     USERNAME_FIELD = 'email'
     REQUIRED_FIELDS = ['username', 'password']
 
     class Meta:
-        managed = False
         db_table = 'usuario'
 
     def __str__(self):
@@ -32,7 +32,7 @@ class Categoria(models.Model):
     parent_id = models.ForeignKey('self', models.DO_NOTHING, blank=True, null=True, related_name='subcategorias')
 
     class Meta:
-        managed = False
+      # managed = False
         db_table = 'categoria'
 
     def __str__(self):
@@ -48,11 +48,8 @@ class Producto(models.Model):
     precio = models.DecimalField(max_digits=10, decimal_places=2)
     stock = models.IntegerField()
     id_categoria = models.ForeignKey(Categoria, models.DO_NOTHING, db_column='id_categoria')
-    created_at = models.DateTimeField(auto_now_add=True)
-    updated_at = models.DateTimeField(auto_now=True)
-
     class Meta:
-        managed = False
+      # managed = False
         db_table = 'producto'
 
     def __str__(self):
@@ -67,7 +64,7 @@ class Carrito(models.Model):
     fecha_creacion = models.DateTimeField(auto_now_add=True)
 
     class Meta:
-        managed = False
+      # managed = False
         db_table = 'carrito'
 
     def __str__(self):
@@ -82,7 +79,7 @@ class ArticuloCarrito(models.Model):
     cantidad = models.IntegerField()
 
     class Meta:
-        managed = False
+      # managed = False
         db_table = 'articulo_carrito'
 
     def __str__(self):
@@ -101,7 +98,7 @@ class Pedido(models.Model):
     updated_at = models.DateTimeField(auto_now=True)
 
     class Meta:
-        managed = False
+      # managed = False
         db_table = 'pedido'
 
     def __str__(self):
@@ -117,7 +114,7 @@ class ArticuloPedido(models.Model):
     precio = models.DecimalField(max_digits=10, decimal_places=2)
 
     class Meta:
-        managed = False
+      # managed = False
         db_table = 'articulo_pedido'
 
     def __str__(self):
@@ -133,7 +130,7 @@ class Envio(models.Model):
     estado_envio = models.CharField(max_length=20, choices=[('preparando', 'Preparando'), ('enviado', 'Enviado'), ('entregado', 'Entregado')], default='preparando')
 
     class Meta:
-        managed = False
+      # managed = False
         db_table = 'envio'
 
     def __str__(self):

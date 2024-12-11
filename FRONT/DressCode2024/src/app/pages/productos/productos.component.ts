@@ -17,8 +17,8 @@ export class ProductosComponent implements OnInit {
   productos: any;
     constructor(productoService:ProductoService) { 
 
-      this.productos = productoService.obtenerProductos().subscribe({next: (productos) => {
-        this.productos=productos;
+      this.productos = productoService.obtenerProductos().subscribe({next: (producto) => {
+        this.productos=producto;
       },
         error: (error) => {
         console.error(error)

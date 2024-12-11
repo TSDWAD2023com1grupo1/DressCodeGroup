@@ -1,6 +1,6 @@
 from django.shortcuts import render
 from django.contrib.auth import authenticate, login, logout
-from rest_framework import status
+from rest_framework import generics ,status
 from rest_framework.response import Response
 from rest_framework.views import APIView
 # Create your views here.
@@ -11,11 +11,11 @@ from .serializer import UsuarioSerializer
 from .models import Usuario
 from .serializer import CarritoSerializer
 from .models import Carrito
-from .serializer import EnviosSerializer
+from .serializer import EnvioSerializer
 from .models import Envio
 from .serializer import PedidoSerializer
 from .models import Pedido
-from .serializer import ArticulosPedidoSerializer
+from .serializer import ArticuloPedidoSerializer
 from .models import ArticuloPedido
 
 
@@ -30,6 +30,9 @@ class UsuariosViewSet(viewsets.ModelViewSet):
     queryset=Usuario.objects.all()
     serializer_class=UsuarioSerializer
 
+class SignUpView(generics.CreateAPIView):
+    serializer_class = UsuarioSerializer
+
 
 class CarritosViewSet(viewsets.ModelViewSet):
     queryset=Carrito.objects.all()
@@ -38,7 +41,7 @@ class CarritosViewSet(viewsets.ModelViewSet):
 
 class EnviosViewSet(viewsets.ModelViewSet):
     queryset=Envio.objects.all()
-    serializer_class=EnviosSerializer
+    serializer_class=EnvioSerializer
 
 
 class PedidosViewSet(viewsets.ModelViewSet):
@@ -48,7 +51,7 @@ class PedidosViewSet(viewsets.ModelViewSet):
 
 class ArticulosPedidoViewSet(viewsets.ModelViewSet):
     queryset=ArticuloPedido.objects.all()
-    serializer_class=ArticulosPedidoSerializer
+    serializer_class=ArticuloPedidoSerializer
 
 class LoginView(APIView):
     def post(self, request):
